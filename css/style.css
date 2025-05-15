@@ -1,0 +1,339 @@
+/* Imports */
+@import url("../fonts/mulish-fonts.css");
+@import url("../node_modules/normalize.css/normalize.css");
+/* CSS reset */
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Header Section */
+main#main{
+    width: 100%;
+    font-family: Mulish-Regular;
+    font-weight: 400;
+}
+header#header{
+    width: 100%;
+    height: 800px;
+    background: #C3DAF2 ;
+    position: relative;
+    overflow: hidden;
+}
+.header-nav{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline; 
+    text-transform: uppercase;
+    padding-top: 1.5rem;
+}
+.logo__text{
+    font-size: 1.2rem;
+    font-family: Mulish-Medium;
+    cursor: pointer;
+    color: #1E3240;
+}
+ul,li{
+    list-style-type: none;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+nav.navigation{
+    width: 50%;
+}
+nav.navigation  ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+nav.navigation ul li{
+    padding: 1.6rem;
+}
+a[href="#"]{
+    display: block;
+    color: #1E3240;
+    font-size: 0.9rem;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+a[href="#"]:hover{
+    opacity: 0.8;
+}
+.header-content{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    top: 10%;
+}
+.slogan__title{
+    max-width: 40%;
+    font-size: 85px;
+    letter-spacing: 1px;
+    color: #1E3240;
+}
+.slogan__text{
+    margin:2rem 0;
+    color: #1E3240;
+    font-size: 18px;
+}
+:where(.slogan-btn--clr , .slogan-btn--trans){
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 1.2rem 2rem;
+    cursor: pointer;
+}
+.slogan-btn--clr{
+    margin-right: 1.7rem;
+    background-color: #1E3240;
+    color: #fff;
+}
+.slogan-btn--trans{
+    border: 1px solid #1E3240;
+    color: #1E3240;
+}
+.header__img{
+    width: 30%;
+    height: 650px;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translate(-100%,-100%) scale(2);
+}
+.header__img > img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+/* About Box Style */
+section.content-wrapper{
+    width: 90%;
+    margin: auto;
+    padding:6rem;
+}
+.about{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.about-img{
+   width: 40%;
+   height: 400px;
+   background: linear-gradient(to bottom , rgba(196, 196, 196, 0.2) ) ,  url("../img/award-box-img.jpg") no-repeat center center ;
+   background-size: cover;
+}
+.about-description{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.about__title{
+    max-width: 700px;
+    font-size: 2rem;
+    color: #1E3240;
+}
+.about__text{
+    font-size: 18px;
+    max-width: 500px;
+    /* margin: 2rem 0; */
+    color: #BDBDBD;
+}
+.about-resume{
+    display: flex;
+    justify-content: space-between;
+}
+.projects{
+    margin-right: 1rem;
+}
+.projects__header{
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #AFD4E2;
+    letter-spacing: 1px;
+}
+.projects > span{
+    font-size: 48px;
+    font-weight: 400;
+    color: #1E3240;
+}
+/* Ongoing Project Style */
+.ongoing-wrapper{
+    width: 100%;
+}
+.ongoing-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+.ongoing__title{
+    margin-bottom: 1rem;
+    font-size: 48px;
+    color: #1E3240;
+}
+.ongoing__text{
+    font-size: 18px;
+    color: #BDBDBD;
+}
+.ongoing-icon >i.fa{
+    font-size: 2rem;
+    color: #AFD4E2;
+}
+.fa-arrow-left{
+    position: relative;
+    right: 10px;
+}
+.ongoing-body{
+    display: flex;
+    justify-content: space-around;
+}
+.ongoing-card{
+    width: 30%;
+    position: relative;
+}
+figure.img-holder{
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+
+}
+:where(figure.img-holder > img , .contact__img > img){
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: grayscale(70%);
+}
+figure.img-holder > img{
+    transition: 5s ease-out;
+    cursor: pointer;
+    
+}
+figure.img-holder:hover > img{
+    transform: scale(1.5);
+}
+.card__description{
+    width: 80%;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-70%);
+    padding: 15px;
+
+}
+:where(.card__name , .card__text ,.comment__heading , .comment__subtitle ){
+    color: #1E3240;
+}
+.card__name{
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+.card__text{
+    font-size: 10px;
+}
+/* comment Header */
+.comment-header{
+    text-align: center;
+    margin-bottom: 6rem;
+}
+.comment__heading{
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+.comment__subtitle{
+    font-size: 18px;
+}
+.comment-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1E3240;
+
+}
+.comment__picture{
+   width: 40%;
+   height: 400px;
+   background: url("../img/comment-img.jpg") no-repeat center center / cover ;
+   filter: grayscale(70%);
+   cursor: pointer;
+}
+.comment__explain{
+    max-width: 50%;
+}
+.comment__title{
+    font-size: 32px;
+}
+.comment__text{
+    margin: 1rem 0;
+    font-size: 24px;
+    text-align: justify;
+    font-family: Mulish-Light;
+    font-weight: 300;
+}
+.arthur__name{
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.arthur__job{
+    font-size: 18px;
+}
+/* contact us Style */
+.contact-wrapper{
+    display: flex;
+    justify-content: space-between;
+    color: #1E3240;
+}
+.contact-content{
+    padding: 1.5rem;
+    width: 50%;
+}
+:is(.contact__img){
+    width: 40%;
+}
+.contact__img{
+   height: 600px;
+}
+.contact-header{
+    margin-bottom: 3rem;
+}
+.contact__title{
+    margin-bottom: 15px;
+}
+.contact__title{
+    font-size: 48px;
+    letter-spacing: 1px;
+}
+.contact__subtitle{
+    font-size: 18px;
+    color: #BDBDBD;
+}
+.form-group{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+input[type]{
+    outline: none;
+    padding: 1rem;
+    border: 1px solid #1E3240;
+    margin: 0.5rem 0.7rem;
+    width: 180px;
+
+}
+input[type]::placeholder{
+    font-size: 18px;
+    font-family: Mulish-Regular;
+}
+
+/* Media Quries */
+
+/* @media only screen and (max-width: 990px) {
+
+   
+  } */
