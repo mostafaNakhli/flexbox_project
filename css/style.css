@@ -67,11 +67,11 @@ a[href="#"]:hover{
     height: 100%;
     margin: auto;
     position: relative;
-    top: 10%;
+    top: 15%;
 }
 .slogan__title{
-    max-width: 40%;
-    font-size: 85px;
+    max-width: 60%;
+    font-size: 75px;
     letter-spacing: 1px;
     color: #1E3240;
 }
@@ -97,12 +97,12 @@ a[href="#"]:hover{
     color: #1E3240;
 }
 .header__img{
-    width: 30%;
+    width: 40%;
     height: 650px;
     position: absolute;
     top: 100%;
     left: 100%;
-    transform: translate(-100%,-100%) scale(2);
+    transform: translate(-100%,-100%) scale(1.5);
 }
 .header__img > img{
     width: 100%;
@@ -191,7 +191,7 @@ section.content-wrapper{
 }
 .ongoing-body{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .ongoing-card{
     width: 30%;
@@ -199,7 +199,7 @@ section.content-wrapper{
 }
 figure.img-holder{
     width: 100%;
-    height: 600px;
+    height: 100%px;
     overflow: hidden;
 
 }
@@ -288,26 +288,23 @@ figure.img-holder:hover > img{
     display: flex;
     justify-content: space-between;
     color: #1E3240;
+    flex-wrap: wrap;
 }
 .contact-content{
     padding: 1.5rem;
     width: 50%;
 }
-:is(.contact__img){
-    width: 40%;
-}
 .contact__img{
+    width: 40%;
    height: 600px;
 }
 .contact-header{
     margin-bottom: 3rem;
 }
 .contact__title{
-    margin-bottom: 15px;
-}
-.contact__title{
     font-size: 48px;
     letter-spacing: 1px;
+    margin-bottom: 15px;
 }
 .contact__subtitle{
     font-size: 18px;
@@ -323,17 +320,251 @@ input[type]{
     padding: 1rem;
     border: 1px solid #1E3240;
     margin: 0.5rem 0.7rem;
-    width: 180px;
+    width: 170px;
 
 }
 input[type]::placeholder{
     font-size: 18px;
     font-family: Mulish-Regular;
 }
+input#descrip{
+    width: 100%;
+    height: 200px;   
+    position: relative; 
+}
+input#descrip::placeholder{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+/* Footer section */
+footer#footer{
+    width: 100%;
+    background-color: #1E3240;
+}
+.footer-wrapper-content{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: forestgreen; */
+    padding: 2rem 0;
+    flex-wrap: wrap;
+}
+:is(.inform , .footer-links){
+    padding: 1rem;
+    color: #fff;
+}
+.inform__title{
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.inform__title > h4{
+    font-size: 18px;
+}
+:where(.quick__option li, .inform__option li , .legal__option li, .soccial__option li){
+    font-size: 14px;
+    color: #BDBDBD;
+}
+.inform__option li:nth-child(2){
+    margin: 1rem 0;
+}
+.footer-links{
+    display: flex;
+    justify-content: space-around;
+    /* background-color: black; */
+    width: 50%;
+}
+.legal-link{
+    margin: 0 1rem;
+}
+:where(.quick__option li ,.legal__option li,.soccial__option li ){
+    margin-top: 10px;
+    text-transform: capitalize;
+}
 
 /* Media Quries */
 
-/* @media only screen and (max-width: 990px) {
 
+/* desktop breakpoint */
+@media only screen and (max-width: 1200px) {
+    .header-content{
+        width: 90%;
+    }
+    .slogan__title{
+        max-width: 50%;
+        font-size: 65px;
+    }
+    .header__img{
+        width: 40%;
+        height: 500px;
+        transform: translate(-100%,-100%) scale(1.9);
+    }
+    input[type]{
+        margin: 0.3rem 0.5rem;
+        width: 150px;
+    
+    }
+    .inform__title > h4{
+        font-size: 16px;
+    }
    
-  } */
+  }
+  @media only screen and (max-width: 1090px) {
+    input[type]{
+        width: 100%;
+    
+    }
+   
+  }
+  /* Laptop breakpoint*/
+  @media only screen and (max-width: 990px) {
+    .header-nav{
+        width: 100%;
+        padding: 1rem;
+        background-color: #fff;
+    }
+    nav.navigation{
+       display: none;
+    }
+    .header-content{
+        width: 100%;
+        padding-left: 1rem;
+        top: 20%;
+    }
+    .slogan__title{
+        max-width: 50%;
+        font-size: 55px;
+    }
+    .header__img{
+        width: 40%;
+        height: 500px;
+        transform: translate(-100%,-100%) scale(1.9);
+    }
+    .projects > span{
+        font-size: 38px;
+    }
+    .ongoing__title{
+        font-size: 38px;
+    }
+    .ongoing__text{
+        font-size: 16px;
+    }
+    .comment__heading{
+        font-size: 38px;
+    }
+    .comment__title{
+        font-size: 25px;
+    }
+    .comment__text{
+        font-size: 20px;
+    }
+    .arthur__name{
+        font-size: 20px;
+    }
+    .contact__title{
+        font-size: 30px;
+    }
+    .contact__subtitle{
+        font-size: 15px;
+    }
+    .contact__img{
+        width: 50%;
+    }
+    .inform__title > h4{
+        font-size: 14px;
+    }
+    :where(.quick__option li, .inform__option li , .legal__option li, .soccial__option li){
+        font-size: 12px;
+    }
+   
+  }
+  @media only screen and (max-width: 900px) {
+
+    .header__img{
+        width: 40%;
+        height: 500px;
+        transform: translate(-100%,-100%) scale(1.7);
+    }
+   
+  }
+  @media only screen and (max-width: 830px) {
+
+    .header__img{
+        width: 40%;
+        height: 450px;
+        transform: translate(-100%,-100%) scale(1.7);
+    }
+   
+  }
+  /* Tablet breakpoint */
+  @media only screen and (max-width: 768px) {
+    .content-wrapper{
+        width: 90%;
+    }
+
+    .header__img{
+        width: 40%;
+        height: 450px;
+        transform: translate(-100%,-100%) scale(1.7);
+    }
+    .slogan__title{
+        font-size: 45px;
+    }
+    .slogan-btn--clr{
+        margin-right: 1rem;
+    }
+    .about{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .about-img{
+        width: 100%;
+        height: 400px;
+        margin-bottom: 2rem;
+     }
+     .about__text{
+        margin: 2rem 0;
+     }
+     .about-description{
+         width: 100%;
+     }
+     .ongoing-body{
+        flex-wrap: wrap;
+    }
+    .ongoing-card{
+        width: 100%;
+        position: relative;
+        margin-bottom: 2rem;
+    }
+    figure.img-holder{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    
+    }
+    .ongoing-icon{
+        display: none;
+    }
+    .comment-content{
+        flex-wrap: wrap;
+    
+    }
+    .comment__picture{
+        width: 100%;
+        height: 400px;
+        margin-bottom: 2rem;
+     }
+     .comment__explain{
+         max-width: 100%;
+     }
+     .contact-content{
+        width: 100%;
+     }
+     .contact__img{
+        width: 100%;
+    }
+   
+  }
